@@ -42,7 +42,7 @@ class App extends Component {
         input: input
       },
       () => {
-        this.keyboardRef.keyboard.setInput(input);
+        this.keyboard.setInput(input);
       }
     );
   };
@@ -65,7 +65,7 @@ class App extends Component {
           //onChange={e => this.onChangeInput(e)}
         />
         <Keyboard
-          ref={r => (this.keyboardRef = r)}
+          keyboardRef={r => (this.keyboard = r)}
           theme={"hg-theme-default hg-layout-numeric numeric-theme"}
           layoutName={this.state.layoutName}
           onChange={input => this.onChange(input)}
